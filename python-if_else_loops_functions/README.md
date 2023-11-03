@@ -1,2 +1,2 @@
-Positive anything is better than negative nothing
+Python - if/else, loops, functions
 
