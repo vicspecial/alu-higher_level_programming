@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import hidden_4
-    names = dir(hidden_4)
-    for name in names:
-        if name[:2} != "__":
-            print(name)
+    from calculator_1 import add, sub, mul, div
+    a = 10
+    b = 5
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
