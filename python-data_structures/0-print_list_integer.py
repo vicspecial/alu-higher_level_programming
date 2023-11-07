@@ -1,14 +1,28 @@
 #!/usr/bin/python3
 def print_list_integer(my_list=[]):
-    for integer in my_list:
-        print("{:d}".format(integer))
+    for num in my_list:
+        if isinstance(num, int):
+            print("{:d}".format(num))
+        else:
+            raise Exception("List contains non-integer values")
 
-# Example
-my_list = [1, 2, 3, 4, 5]
-print_list_integer(my_list)
-# Output
-# 1
-# 2
-# 3
-# 4
-# 5
+# Testing the function
+try:
+    print_list_integer([1, 2, 3])
+except Exception as e:
+    print(e)
+
+try:
+    print_list_integer([1])
+except Exception as e:
+    print(e)
+
+try:
+    print_list_integer([])
+except Exception as e:
+    print(e)
+
+try:
+    print_list_integer([1, 2, "H", 9])
+except Exception as e:
+    print(e)
