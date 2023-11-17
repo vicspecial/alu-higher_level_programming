@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-Rectangle = __import__('0-rectangle').Rectangle
+class Rectangle:
+    def _init_(self, width, height):
+        self.width = width
+        self.height = height
 
-my_rectangle = Rectangle()
-print(type(my_rectangle))
-print(my_rectangle.__dict__)
-
-guillaume@ubuntu:~/$ ./0-main.py
-<class '0-rectangle.Rectangle'>
-{}
+    def area(self):
+        return self.width * self.height
