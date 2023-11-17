@@ -5,11 +5,6 @@ my_rectangle = Rectangle()
 print(type(my_rectangle))
 print(my_rectangle.__dict__)
 
-
-When you run this code, it should output:
-
-
+guillaume@ubuntu:~/$ ./0-main.py
 <class '0-rectangle.Rectangle'>
 {}
-
-
