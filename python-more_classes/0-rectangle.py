@@ -1,15 +1,4 @@
 #!/usr/bin/python3
-class Rectangle:
-    """
-    Class that defines a rectangle
-    """
-
-    def __init__(self):
-        """
-        Initializes an empty rectangle
-        """
-        pass
-
 Rectangle = __import__('0-rectangle').Rectangle
 
 my_rectangle = Rectangle()
