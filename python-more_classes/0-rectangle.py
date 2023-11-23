@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-class Rectangle:
-    def _init_(self, width, height):
-        self.width = width
-        self.height = height
+""" We are  creating an empty rectangle class"""
 
-    def area(self):
-        return self.width * self.height
+
+class Rectangle:
+    """ let's initialize"""
+
+    pass
