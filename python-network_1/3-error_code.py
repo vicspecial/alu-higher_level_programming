@@ -1,25 +1,20 @@
 #!/usr/bin/python3
-"""2-post_email.py"""
+"""Sends a request to a given URL and displays the response body.
 
-
-import urllib.request
-import urllib.error
+Usage: ./3-error_code.py <URL>
+  - Handles HTTP errors.
+"""
 import sys
+import urllib.error
+import urllib.request
 
-def fetch_url(url):
-    """ this is documented"""
-    try:
-        with urllib.request.urlopen(url) as response:
-            body = response.read().decode('utf-8')
-            print(body)
-    except urllib.error.HTTPError as e:
-        print(f"Error code: {e.code}")
 
 if __name__ == "__main__":
-    """ this is also documented"""
-    if len(sys.argv) < 2:
-        print("Usage: python script.py <URL>")
-        sys.exit(1)
-
     url = sys.argv[1]
-    fetch_url(url) 
+
+    request = urllib.request.Request(url)
+    try:
+        with urllib.request.urlopen(request) as response:
+            print(response.read().decode("ascii"))
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))
