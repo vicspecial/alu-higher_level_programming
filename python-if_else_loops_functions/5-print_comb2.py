@@ -1,7 +1,6 @@
-#!/usr/bin/python
-for tens_digit in range(10):
-    for ones_digital in range(tens_digit + 1, 10):
-        print(
-            "{:d}{:d}".format(tens_digit, ones_digit),
-            end=", " if tens_digit < 8 else "\n"
-       )
+#!/usr/bin/python3
+for i in range(0, 100):
+    if i < 99:
+        print("{0:0>2d}, ".format(i), end="")
+    else:
+        print("{0:0>2d}".format(i), end="\n")
